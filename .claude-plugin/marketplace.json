@@ -1,0 +1,13 @@
+{
+  "name": "little-cities",
+  "owner": { "name": "southpolemonkey", "url": "https://github.com/southpolemonkey" },
+  "metadata": { "description": "Little Cities: hand-drawn isometric city animations built by Claude Code." },
+  "plugins": [
+    {
+      "name": "mini-city",
+      "source": "./plugins/mini-city",
+      "description": "Build a hand-drawn, isometric, 50-second animated map of any city with /mini-city <City>.",
+      "category": "creative"
+    }
+  ]
+}

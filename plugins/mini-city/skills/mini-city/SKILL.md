@@ -5,7 +5,13 @@ description: Build a new "Little <City>" animation for the Little Cities site �
 
 # mini-city: add a city to Little Cities
 
-The repo is a folder of self-contained HTML animations plus a home page of tiles. Run everything from the repo root:
+The site is a folder of self-contained HTML animations plus a home page of tiles. Run everything from the site's root folder.
+
+**Step 0: find or set up the site.** The current folder is a Little Cities site if it has `shanghai/index.html` and `index.html`; work there. Otherwise (the skill was installed as a plugin and Claude was started somewhere else):
+- If a `mini-city/` subfolder holds the site, `cd` into it.
+- Otherwise clone the starter, which has the engine, the home page and five example cities: `git clone --depth 1 https://github.com/southpolemonkey/mini-city.git` then `cd mini-city`. Tell the user you did this and where.
+
+The site looks like this:
 
 ```
 <repo root>/
@@ -14,13 +20,12 @@ The repo is a folder of self-contained HTML animations plus a home page of tiles
   prompts/<slug>.txt                  ← the prompt each city was built from
   san-francisco/, sydney/, beijing/, tehran/ …
   shanghai/index.html                 ← the base engine: start from this
-  .claude/skills/mini-city/           ← this skill (scripts/ and reference/)
 ```
 
 - **Preview:** `python3 -m http.server 8000` in the repo root, then open `http://localhost:8000/<slug>/`. Each city is one static HTML file, so any static host (GitHub Pages, Netlify, Cloudflare Pages) can serve the folder as is.
 - **Keep it local.** Build the city as files in the repo. Don't publish it anywhere (Artifacts, gists, hosting) unless the user asks.
 - **Needs:** `python3`, `node` (syntax check) and a Chromium/Chrome for screenshots (`npx playwright install chromium`, or set `CHROME=/path/to/chrome`).
-- Script paths below are relative to this skill's folder: `.claude/skills/mini-city/scripts/…`.
+- Scripts are in this skill's own `scripts/` folder (the base directory shown when the skill loads). Run them with the site root as the current directory, or set `SITE=/path/to/site`.
 
 ## Workflow
 

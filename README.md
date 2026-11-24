@@ -8,7 +8,27 @@ San Francisco · Shanghai · Sydney · Beijing · Tehran
 
 ## Make your own city
 
-The cities are built by [Claude Code](https://claude.com/claude-code) using the `mini-city` skill that ships in this repo (`.claude/skills/mini-city/`).
+The cities are built by [Claude Code](https://claude.com/claude-code) using the `mini-city` skill. This repo is also a Claude Code plugin marketplace, so you can install the skill in one line.
+
+### Option 1: install the plugin
+
+Inside Claude Code:
+
+```
+/plugin install mini-city --marketplace southpolemonkey/mini-city
+```
+
+(On older Claude Code versions: `/plugin marketplace add southpolemonkey/mini-city`, then `/plugin install mini-city@little-cities`.)
+
+Then, in any folder, ask for a city:
+
+```
+/mini-city Tokyo
+```
+
+The first time, it clones this repo as a `mini-city/` folder to get the engine and the home page, then builds your city there.
+
+### Option 2: clone the repo
 
 ```bash
 git clone https://github.com/southpolemonkey/mini-city.git
@@ -31,8 +51,6 @@ python3 -m http.server 8000
 - `python3` and `node`
 - Chromium or Chrome for the screenshot checks: `npx playwright install chromium`, or set `CHROME=/path/to/chrome`
 
-### Use the skill in another folder
-Copy `.claude/skills/mini-city` into `~/.claude/skills/` so it's available everywhere. The scripts work on the current directory, so run Claude from a folder laid out like this repo (it needs `shanghai/index.html` as the engine and `index.html` as the home page).
 
 ## URL parameters
 - `?night=1` / `?night=0`: force night or day (or press **N**)
@@ -45,7 +63,8 @@ index.html                 home page with a tile per city
 <city>/index.html          one city, one file
 thumbs/<city>-0|1.webp     tile pictures (day, night)
 prompts/<city>.txt         the prompt each city was built from
-.claude/skills/mini-city/  the skill: SKILL.md, engine notes, prompt template, scripts
+plugins/mini-city/         the plugin; the skill is in skills/mini-city/ (SKILL.md, engine notes, prompt template, scripts)
+.claude-plugin/            marketplace manifest
 ```
 
 Share what you build: open a pull request with your city folder, thumbnails, prompt and tile.

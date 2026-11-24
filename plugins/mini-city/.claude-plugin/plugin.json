@@ -1,0 +1,10 @@
+{
+  "name": "mini-city",
+  "version": "1.0.0",
+  "description": "Build a 'Little <City>' animation: a 50-second, hand-drawn, isometric Canvas map of a real city that builds itself, with day/night modes and a camera tour. Run /mini-city Tokyo.",
+  "author": { "name": "southpolemonkey", "url": "https://github.com/southpolemonkey" },
+  "homepage": "https://mini-city.rongchenxuan.com/",
+  "repository": "https://github.com/southpolemonkey/mini-city",
+  "license": "MIT",
+  "keywords": ["isometric", "animation", "canvas", "maps", "generative-art", "cities"]
+}

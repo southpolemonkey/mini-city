@@ -1,0 +1,29 @@
+Create a charming 50-second isometric animation of Shanghai, entirely drawn in code (no image/video models, no external assets). Style: clean hand-drawn line art with soft outlines, gentle pastel colors, subtle paper texture on a cream/off-white background. Cute, lively, illustrated-map aesthetic.
+
+Layout: an isometric city made of floating rectangular blocks/tiles that gradually fill in and densify, split by the winding Huangpu River — the old city and the Bund on one bank, the Lujiazui skyline on the other. Include these iconic Shanghai elements arranged naturally:
+- The Bund: a row of stately stone buildings with domes and a clock tower along a riverside promenade full of strollers taking photos
+- Lujiazui skyline: Oriental Pearl–like tower with pink spheres, a twisting supertall tower, a "bottle-opener" tower, and a tiered pagoda-like skyscraper
+- Lujiazui's elevated circular pedestrian skywalk with people on it
+- Huangpu River with ferries crossing, cargo barges, and sightseeing boats
+- Yu Garden: upturned-eave roofs, a zigzag bridge over a koi pond, and a teahouse pavilion with red lanterns
+- Nanjing Road pedestrian street with colorful vertical shop signs, crowds, and a little sightseeing tram
+- Shikumen lane houses (stone gateways, narrow alleys, laundry poles with hanging clothes, people on stools)
+- People's Square park with a round-topped museum, fountains, and pigeons
+- A golden-roofed temple among modern towers
+- A tree-lined old French Concession street with plane trees, cafés, and bicycles
+- A spiral-ramped cable-stayed bridge and an elevated highway interchange with flowing traffic
+- A sleek maglev or metro train gliding on an elevated track
+- Parks with tai chi groups, square dancing, kite flyers, mahjong tables, and a badminton game
+- Buses, taxis, electric scooters, delivery riders, bikes, and lots of tiny pedestrians
+
+Animation details:
+- Start sparse (just river, roads, and a few buildings) and progressively populate with more landmarks, people, and vehicles
+- Continuous life: tiny diverse people walking, cycling, dancing, and playing; traffic flowing on the elevated roads; boats on the river; flags and laundry waving; lanterns swaying
+- Smooth slow camera pans, gentle zooms, and occasional focus shifts between key areas (Bund → river → Lujiazui → Yu Garden → lanes → wide overview)
+- Soft ambient motion, looping-friendly energy (the end frame matches the start)
+- Clean, readable silhouettes, high visual density but not cluttered
+- Short captions per chapter in a small card, plus play/pause and a scrubbable timeline
+
+Night mode: add a day/night toggle (button + N key, remembered between visits, and a ?night=1 URL parameter). At night the palette turns moonlit indigo, and the city lights up: lit windows, glowing Bund facades, the Lujiazui towers and the Pearl tower lit up and reflected in the river, red aviation lights blinking, neon signs on Nanjing Road, lanterns in Yu Garden, car headlights and taillights, glowing boat cabins, plus a moon and stars in the wide shots.
+
+Output as a single self-contained HTML file using Canvas 2D that renders a polished looping animation and works well on both desktop and phone screens. Keep it as a local file; do not publish it anywhere.

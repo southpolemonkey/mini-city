@@ -1,0 +1,26 @@
+Create a charming 50-second isometric animation of {CITY}, entirely drawn in code (no image/video models, no external assets). Style: clean hand-drawn line art with soft outlines, gentle pastel colors, subtle paper texture on a cream/off-white background. Cute, lively, illustrated-map aesthetic.
+
+Layout: an isometric city made of floating rectangular blocks/tiles that gradually fill in and densify, {GEOGRAPHY — e.g. "split by the X River", "on a peninsula between the bay and the ocean", "around a harbour"}. Include these iconic {CITY} elements arranged naturally:
+- {HERO LANDMARK — the postcard view, described by shape, not brand}
+- {SKYLINE / TALL BUILDINGS}
+- {HISTORIC DISTRICT — roofs, streets, textures}
+- {WATERFRONT / BRIDGES / BOATS}
+- {MARKET or SHOPPING STREET — signs, stalls, crowds}
+- {TRADITIONAL HOUSING — e.g. row houses, courtyards, canal houses}
+- {PARK or SQUARE — with its signature activity}
+- {RELIGIOUS / CULTURAL BUILDING}
+- {LOCAL TRANSPORT — tram, cable car, metro on viaduct, ferries, tuk-tuks…}
+- {EVERYDAY LIFE — what locals actually do outdoors: games, food, dancing, sport}
+- {VEHICLES — the city's typical taxis, buses, bikes, scooters} and lots of tiny pedestrians
+
+Animation details:
+- Start sparse (just {WATER/LAND}, roads, and a few buildings) and progressively populate with more landmarks, people, and vehicles
+- Continuous life: tiny diverse people walking, cycling and playing; traffic flowing; boats on the water; flags and laundry waving
+- Smooth slow camera pans, gentle zooms, and occasional focus shifts between key areas ({AREA 1} → {AREA 2} → {AREA 3} → … → wide overview)
+- Soft ambient motion, looping-friendly energy (the end frame matches the start)
+- Clean, readable silhouettes, high visual density but not cluttered
+- Short captions per chapter in a small card, plus play/pause and a scrubbable timeline
+
+Night mode: add a day/night toggle (button + N key, remembered between visits, and a ?night=1 URL parameter). At night the palette turns moonlit indigo, and the city lights up: lit windows, {CITY-SPECIFIC NIGHT SIGHTS — illuminated landmark, neon, lanterns, bridge lights}, reflections in the water, red aviation lights blinking, car headlights and taillights, glowing boat cabins, plus a moon and stars in the wide shots.
+
+Output as a single self-contained HTML file using Canvas 2D that renders a polished looping animation and works well on both desktop and phone screens. Keep it as a local file; do not publish it anywhere.

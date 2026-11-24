@@ -1,0 +1,28 @@
+Create a charming 50-second isometric animation of Sydney, entirely drawn in code (no image/video models, no external assets). Style: clean hand-drawn line art with soft outlines, gentle pastel colors, subtle paper texture on a cream/off-white background. Cute, lively, illustrated-map aesthetic.
+
+Layout: an isometric city made of floating rectangular blocks/tiles that gradually fill in and densify, wrapped around Sydney Harbour — the CBD and old Rocks on the south shore, the North Shore across the water, Darling Harbour cutting in from the west, and the Pacific surf of Bondi on the eastern edge. Include these iconic Sydney elements arranged naturally:
+- The Opera House on Bennelong Point: white tiled sail-shells on a granite podium with grand steps and people on the forecourt
+- The Harbour Bridge: a great steel arch with granite pylons, cars and double-deck trains crossing, and a line of bridge climbers on the arch with flags at the summit
+- Circular Quay: finger wharves with green-and-cream ferries coming and going, a docked cruise ship, Customs House, cafés and a didgeridoo busker
+- The Rocks: sandstone terraces, an old pub with a balcony, and a weekend market under white canopies
+- Luna Park: the giant smiling face entrance, striped towers, a Ferris wheel and a carousel
+- Taronga Zoo on the North Shore: giraffes looking out over the harbour, hopping kangaroos, a sky-safari gondola
+- Royal Botanic Garden: big fig trees, a pond, ibis poking around, cockatoos overhead, Government House
+- CBD: glass towers, Sydney Tower's golden turret, St Mary's Cathedral, Hyde Park's fountain and giant chess, the domed Queen Victoria Building, a light-rail tram on George Street
+- Darling Harbour: Pyrmont swing bridge with walkers, a moored tall ship, a park with a playground, and Chinatown's gate and lanterns
+- Paddington terraces with iron-lace balconies under purple jacaranda trees
+- A cricket match on a suburban oval
+- Bondi Beach: rolling surf, surfers, swimmers between red-and-yellow flags, a lifeguard tower, umbrellas, and the Icebergs ocean pool with waves crashing in
+- Sailboats, water taxis and kayaks on the harbour; buses, taxis, bikes, delivery riders, and lots of tiny pedestrians
+
+Animation details:
+- Start sparse (just water, roads, and a few buildings) and progressively populate with more landmarks, people, and vehicles
+- Continuous life: tiny diverse people walking, cycling, surfing and playing; traffic flowing over the bridge; ferries and yachts on the harbour; flags waving; the Ferris wheel turning
+- Smooth slow camera pans, gentle zooms, and occasional focus shifts between key areas (Opera House → Harbour Bridge → Luna Park & Taronga → Circular Quay & The Rocks → Darling Harbour → Sydney Tower & Hyde Park → Paddington → Bondi → wide overview)
+- Soft ambient motion, looping-friendly energy (the end frame matches the start)
+- Clean, readable silhouettes, high visual density but not cluttered
+- Short captions per chapter in a small card, plus play/pause and a scrubbable timeline
+
+Night mode: add a day/night toggle (button + N key, remembered between visits, and a ?night=1 URL parameter). At night the palette turns moonlit indigo, and the city lights up: Vivid-style colour projections drifting over the Opera House sails, the Harbour Bridge arch outlined in lights, Luna Park's face and Ferris wheel glowing, Sydney Tower's golden turret, lit windows and porch lights, reflections in the harbour, red aviation lights blinking, car headlights and taillights, glowing ferry cabins, plus a moon and stars in the wide shots.
+
+Output as a single self-contained HTML file using Canvas 2D that renders a polished looping animation and works well on both desktop and phone screens. Keep it as a local file; do not publish it anywhere.

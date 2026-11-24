@@ -1,0 +1,26 @@
+Create a charming 50-second isometric animation of Beijing, entirely drawn in code (no image/video models, no external assets). Style: clean hand-drawn line art with soft outlines, gentle pastel colors, subtle paper texture on a cream/off-white background. Cute, lively, illustrated-map aesthetic.
+
+Layout: an isometric city made of floating rectangular blocks/tiles that gradually fill in and densify, laid out on Beijing's north–south central axis — the Forbidden City at the heart, Tiananmen and the square to the south, lakes and hutongs to the west and north, the CBD to the east, and the Great Wall winding over green hills along the northern edge. Include these iconic Beijing elements arranged naturally:
+- The Forbidden City: red walls, a moat, corner towers, the U-shaped Meridian Gate, the golden-roofed Hall of Supreme Harmony on a three-tier white marble terrace, and the curving Golden Water stream with its little bridges
+- Tiananmen: the red gate with golden double roof, big red lanterns, the portrait, white marble bridges and stone pillars
+- Tiananmen Square with the flag being raised, the Monument to the People's Heroes, the Great Hall, the National Museum and the egg-shaped National Theatre on its pool
+- Jingshan hill with its pavilion looking over the palace roofs; the Drum and Bell Towers
+- Beihai lake with the White Dagoba on its island, and Houhai with lantern-lit bars, willows and duck pedal boats
+- Hutongs: grey-roofed courtyard houses with red doors and a tree in each courtyard, xiangqi players, a man with a birdcage, a kid with a diabolo, an old man writing water calligraphy on the pavement, pedicabs
+- The Temple of Heaven: the round triple-blue-roofed hall on white terraces, the Circular Altar, cypress trees, tai chi, square dancing and shuttlecock kicking
+- Qianmen gate and arrow tower, the shopping street and its little vintage tram
+- The Bird's Nest stadium and the Water Cube; the Lama Temple with incense smoke
+- The CBD: glass towers, the looping CCTV building and the tall vase-shaped CITIC tower
+- Shared bikes, delivery scooters, red buses, taxis, and lots of tiny pedestrians
+
+Animation details:
+- Start sparse (just roads and a few buildings) and progressively populate with more landmarks, people, and vehicles
+- Continuous life: tiny diverse people walking, cycling, dancing and playing; traffic on Chang'an Avenue; boats on the lakes; flags and lanterns waving; hikers on the Great Wall
+- Smooth slow camera pans, gentle zooms, and occasional focus shifts between key areas (Great Wall → Olympic Park → Drum Tower & Jingshan → Beihai & Houhai → hutongs → Forbidden City → Tiananmen → Qianmen → Temple of Heaven → CBD → wide overview)
+- Soft ambient motion, looping-friendly energy (the end frame matches the start)
+- Clean, readable silhouettes, high visual density but not cluttered
+- Short captions per chapter in a small card, plus play/pause and a scrubbable timeline
+
+Night mode: add a day/night toggle (button + N key, remembered between visits, and a ?night=1 URL parameter). At night the palette turns moonlit indigo, and the city lights up: Tiananmen glowing gold with its red lanterns lit, golden edges on the palace roofs, the Bird's Nest glowing red and the Water Cube blue, lantern-lit bars and reflections on Houhai, the floodlit Temple of Heaven, lamps along the Great Wall, lit windows in the CBD, red aviation lights blinking, car headlights and taillights, plus a moon and stars in the wide shots.
+
+Output as a single self-contained HTML file using Canvas 2D that renders a polished looping animation and works well on both desktop and phone screens. Keep it as a local file; do not publish it anywhere.

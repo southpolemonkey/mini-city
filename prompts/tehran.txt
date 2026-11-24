@@ -1,0 +1,23 @@
+Create a charming 50-second isometric animation of Tehran, entirely drawn in code (no image/video models, no external assets). Style: clean hand-drawn line art with soft outlines, gentle pastel colors, subtle paper texture on a cream/off-white background. Cute, lively, illustrated-map aesthetic.
+
+Layout: an isometric city made of floating rectangular blocks/tiles that gradually fill in and densify, with the snow-capped Alborz mountains along the northern edge and Damavand's white cone rising in the haze behind them. Valiasr Street runs north–south from Tajrish down toward the bazaar, lined with plane trees and water channels; Enghelab Street runs east–west into Azadi Square; Modares highway is crossed by the Nature Bridge.
+
+Landmarks and scenes:
+1. The Alborz ridges with snow, and Mount Damavand behind
+2. The Tochal telecabin climbing the mountain, gondolas going up and down
+3. Darband: tea-house platforms with carpets and qalyan by a mountain stream, string lanterns
+4. Tajrish: the turquoise-domed shrine with two minarets and the fruit stalls of the bazaar
+5. Sa'dabad: a Persian garden with a long pool and fountains, the White Palace and the giant bronze boots
+6. Tabiat (Nature) Bridge: three decks on branching tree-like columns over the highway, people walking
+7. Milad Tower: the tall shaft on its ribbed base, the glass pod and the long mast
+8. Valiasr Street's plane trees, Laleh Park picnics on Persian rugs, backgammon, kids' football
+9. The Museum of Contemporary Art with its windcatcher skylights and sculpture garden; the Tehran University gate
+10. Azadi Tower in its oval square, cars circling the roundabout, fountains and pigeons
+11. Golestan Palace: the Shams-ol-Emareh tower, tiled wings, the Marble Throne iwan and the garden pool
+12. Sepahsalar Mosque: turquoise dome and four minarets
+13. The Grand Bazaar: rows of brick domes, hanging rugs, porters with carts, the Imam Mosque courtyard
+14. A neighbourhood street: a sangak bakery with the oven glowing and a queue, a chaikhaneh with tea and qalyan, a kebab grill, fruit stalls
+Everyday life: yellow and green taxis, white Paykans, red BRT buses on Enghelab and Valiasr, lots of motorbikes (often with a passenger), delivery scooters, pedestrians (many women in colourful headscarves).
+
+Night mode: Azadi floodlit white-blue, Milad's shaft and pod glowing in shifting colours with a red blinking tip, turquoise domes and minaret balconies lit, warm lights on the Nature Bridge, lanterns in Darband and the bazaar, cable-car lights up the mountain, lit windows across the city, the moon over the snow.
+Camera: 12 chapters, a slow tour from the mountains down through the city to the bazaar, ending on the whole city. Loops seamlessly.

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Little Cities</title>
+<meta name="description" content="Hand-drawn isometric cities that build themselves in 50 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@500;700&display=swap">
+<style>
+:root{
+  --paper:#f7f0e1;
+  --ink:#5c4842;
+  --ink-soft:#8c776e;
+  --accent:#e0533d;
+  --card:#fbf6ea;
+  --rule:rgba(92,72,66,.22);
+  --shadow:rgba(92,72,66,.35);
+  --btn:#fffaf0;
+  --hand:'Caveat','Segoe Print','Comic Sans MS',cursive;
+  --ui:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+body.night{--paper:#2b2e52;--ink:#f1e8d4;--ink-soft:#b8afc8;--accent:#f2a85b;--card:#343866;
+  --rule:rgba(240,230,210,.2);--shadow:rgba(0,0,0,.55);--btn:#323764;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:var(--ui);
+  transition:background-color .5s,color .5s;
+  background-image:radial-gradient(rgba(92,72,66,.07) 1px,transparent 1.2px);background-size:7px 7px}
+body.night{background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.2px)}
+main{max-width:1120px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 40px) 16px 56px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+h1{font-family:var(--hand);font-weight:700;font-size:64px;line-height:.95;margin:4px 0 6px}
+h1 span{color:var(--accent);transition:color .5s}
+.lede{font-family:var(--hand);font-size:24px;margin:0;color:var(--ink-soft)}
+.toggle{appearance:none;border:1px solid var(--rule);background:var(--btn);color:var(--ink);font:700 13px var(--ui);
+  padding:8px 14px 8px 10px;border-radius:999px;display:flex;align-items:center;gap:8px;cursor:pointer}
+.toggle svg{width:16px;height:16px;fill:currentColor}
+.toggle:focus-visible,.tile:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:24px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--rule);border-radius:16px;
+  overflow:hidden;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 8px 22px -14px var(--shadow);
+  transition:transform .25s,box-shadow .25s,background-color .5s}
+.tile:hover{transform:translateY(-3px) rotate(-.3deg);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 18px 30px -16px var(--shadow)}
+.pic{position:relative;aspect-ratio:3/2;overflow:hidden;border-bottom:1px solid var(--rule)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s,transform .8s}
+.pic .n{opacity:0}
+.tile:hover .pic img{transform:scale(1.04)}
+body:not(.night) .tile:hover .pic .n{opacity:1}
+body.night .pic .n{opacity:1}
+body.night .tile:hover .pic .n{opacity:0}
+.hint{position:absolute;right:10px;bottom:10px;font:700 11px var(--ui);letter-spacing:.06em;text-transform:uppercase;
+  background:var(--card);color:var(--ink-soft);border:1px solid var(--rule);border-radius:999px;padding:4px 10px;opacity:.92}
+.body{padding:14px 18px 18px}
+.row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+h2{font-family:var(--hand);font-size:38px;line-height:1;margin:0}
+.coord{font-size:11px;letter-spacing:.08em;color:var(--ink-soft);font-weight:700;white-space:nowrap}
+.desc{margin:6px 0 12px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
+.go{font-family:var(--hand);font-size:22px;color:var(--accent);font-weight:700}
+.go::after{content:'→';display:inline-block;margin-left:6px;transition:transform .2s}
+.tile:hover .go::after{transform:translateX(4px)}
+
+.soon{display:grid;place-items:center;text-align:center;border:2px dashed var(--rule);border-radius:16px;min-height:260px;padding:24px;
+  color:var(--ink-soft)}
+.soon b{display:block;font-family:var(--hand);font-size:32px;color:var(--ink);opacity:.7}
+a.soon{text-decoration:none;transition:border-color .25s,transform .25s}
+a.soon:hover{border-color:var(--accent);transform:translateY(-3px)}
+a.soon .go{display:block;margin-top:10px}
+a.soon:focus-visible,.gh:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.make{margin-top:48px;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;background:var(--card);
+  border:1px solid var(--rule);border-radius:16px;padding:28px;box-shadow:0 8px 22px -14px var(--shadow);transition:background-color .5s}
+.make h2{font-size:44px;margin-bottom:10px}
+.make p{margin:0 0 18px;font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.make p a{color:var(--accent)}
+.gh{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:700 15px var(--ui);color:var(--btn);background:var(--ink);
+  padding:11px 18px;border-radius:999px;transition:transform .2s}
+.gh:hover{transform:translateY(-2px)}
+.gh svg{width:18px;height:18px;fill:currentColor}
+.code{margin:0;background:#3a2f2c;color:#f4ead6;border-radius:12px;padding:18px 20px;font:13.5px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+body.night .code{background:#1f2140}
+.code .c{color:#b9a89c}
+@media (max-width:760px){.make{grid-template-columns:1fr;padding:20px}.make h2{font-size:36px}}
+footer{margin-top:40px;text-align:center;font-family:var(--hand);font-size:20px;color:var(--ink-soft)}
+@media (max-width:560px){h1{font-size:48px}.lede{font-size:20px}main{padding-top:calc(env(safe-area-inset-top,0px) + 24px)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <div class="eyebrow">Illustrated cities · hand-drawn, isometric</div>
+      <h1>Little <span>Cities</span></h1>
+      <p class="lede">Pick a city and watch it build itself in 50 seconds.</p>
+    </div>
+    <button class="toggle" id="mode" aria-pressed="false"><svg viewBox="0 0 16 16" id="icon"></svg><span id="modeLabel">Night</span></button>
+  </header>
+
+  <section class="grid" aria-label="Cities">
+    <a class="tile" href="san-francisco/" data-city>
+      <div class="pic">
+        <img class="d" src="thumbs/san-francisco-0.webp" alt="Isometric illustration of San Francisco by day">
+        <img class="n" src="thumbs/san-francisco-1.webp" alt="" aria-hidden="true">
+        <span class="hint"></span>
+      </div>
+      <div class="body">
+        <div class="row"><h2>San Francisco</h2><span class="coord">37.77° N 122.42° W</span></div>
+        <p class="desc">Golden Gate Bridge, cable cars up the hills, Painted Ladies, Chinatown lanterns, the ballpark and Pier 39.</p>
+        <span class="go">Open the city</span>
+      </div>
+    </a>
+
+    <a class="tile" href="shanghai/" data-city>
+      <div class="pic">
+        <img class="d" src="thumbs/shanghai-0.webp" alt="Isometric illustration of Shanghai by day">
+        <img class="n" src="thumbs/shanghai-1.webp" alt="" aria-hidden="true">
+        <span class="hint"></span>
+      </div>
+      <div class="body">
+        <div class="row"><h2>Shanghai</h2><span class="coord">31.23° N 121.47° E</span></div>
+        <p class="desc">The Bund across the Huangpu, Lujiazui towers, Yu Garden, Nanjing Road, shikumen lanes and the Nanpu Bridge.</p>
+        <span class="go">Open the city</span>
+      </div>
+    </a>
+
+    <a class="tile" href="sydney/" data-city>
+      <div class="pic">
+        <img class="d" src="thumbs/sydney-0.webp" alt="Isometric illustration of Sydney by day">
+        <img class="n" src="thumbs/sydney-1.webp" alt="" aria-hidden="true">
+        <span class="hint"></span>
+      </div>
+      <div class="body">
+        <div class="row"><h2>Sydney</h2><span class="coord">33.87° S 151.21° E</span></div>
+        <p class="desc">The Opera House and Harbour Bridge, ferries at Circular Quay, Luna Park, Paddington terraces and the surf at Bondi.</p>
+        <span class="go">Open the city</span>
+      </div>
+    </a>
+
+    <a class="tile" href="beijing/" data-city>
+      <div class="pic">
+        <img class="d" src="thumbs/beijing-0.webp" alt="Isometric illustration of Beijing by day">
+        <img class="n" src="thumbs/beijing-1.webp" alt="" aria-hidden="true">
+        <span class="hint"></span>
+      </div>
+      <div class="body">
+        <div class="row"><h2>Beijing</h2><span class="coord">39.90° N 116.40° E</span></div>
+        <p class="desc">The Forbidden City and Tiananmen, the Great Wall on the hills, hutongs, Houhai&#x27;s lanterns and the Temple of Heaven.</p>
+        <span class="go">Open the city</span>
+      </div>
+    </a>
+
+    <a class="tile" href="tehran/" data-city>
+      <div class="pic">
+        <img class="d" src="thumbs/tehran-0.webp" alt="Isometric illustration of Tehran by day">
+        <img class="n" src="thumbs/tehran-1.webp" alt="" aria-hidden="true">
+        <span class="hint"></span>
+      </div>
+      <div class="body">
+        <div class="row"><h2>Tehran</h2><span class="coord">35.69° N 51.39° E</span></div>
+        <p class="desc">Azadi and Milad towers, the snowy Alborz with Damavand behind, the Nature Bridge, the Grand Bazaar and Golestan Palace.</p>
+        <span class="go">Open the city</span>
+      </div>
+    </a>
+
+    <a class="soon" href="#make"><div><b>Your city next?</b>Build your own with Claude Code<span class="go">How it works</span></div></a>
+  </section>
+
+  <section class="make" id="make" aria-labelledby="make-h">
+    <div class="make-text">
+      <h2 id="make-h">Make your own city</h2>
+      <p>Every map here was drawn by <a href="https://claude.com/claude-code">Claude Code</a> with the <b>mini-city</b> skill. It's open source: clone the repo, name a city, and Claude writes the prompt, plans the map, builds the animation, screenshots each chapter to check it, and adds a tile for it to this page.</p>
+      <a class="gh" href="https://github.com/southpolemonkey/mini-city"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.71 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0z"/></svg>Get the skill on GitHub</a>
+    </div>
+    <pre class="code" aria-label="Commands"><code><span class="c"># get the skill and the engine</span>
+git clone https://github.com/southpolemonkey/mini-city.git
+cd mini-city
+claude
+
+<span class="c"># then, inside Claude Code</span>
+/mini-city Tokyo</code></pre>
+  </section>
+
+  <footer>Each map loops. Press <b>N</b> on a city page to switch day and night.</footer>
+</main>
+<script>
+const SUN='<circle cx="8" cy="8" r="3.2"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></g>';
+const MOON='<path d="M10.5 1.5a6.5 6.5 0 1 0 4 11.6A5.5 5.5 0 0 1 10.5 1.5z"/>';
+let night=false;
+try{night=localStorage.getItem('cities-night')==='1'}catch(e){}
+function apply(){
+  document.body.classList.toggle('night',night);
+  document.getElementById('icon').innerHTML=night?SUN:MOON;
+  document.getElementById('modeLabel').textContent=night?'Day':'Night';
+  document.getElementById('mode').setAttribute('aria-pressed',night);
+  document.querySelectorAll('[data-city]').forEach(a=>{
+    a.href=a.getAttribute('href').split('?')[0]+'?night='+(night?1:0);
+    a.querySelector('.hint').textContent=night?'hover for day':'hover for night';
+  });
+}
+document.getElementById('mode').onclick=()=>{night=!night;try{localStorage.setItem('cities-night',night?'1':'0')}catch(e){}apply()};
+apply();
+</script>
+</body>
+</html>
